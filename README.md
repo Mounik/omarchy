@@ -44,6 +44,12 @@ bash <(curl -s https://raw.githubusercontent.com/Mounik/omarchy/main/boot.sh)
 - **btop** - Moniteur système moderne
 - **GitHub CLI** - Intégration GitHub native
 
+### Environnement de Développement
+- **LazyVim** - Distribution Neovim pré-configurée
+- **LSP Servers** - Auto-complétion et diagnostics pour tous les langages
+- **Linters & Formatters** - Qualité de code avec golangci-lint, ruff, eslint, prettier, shellcheck
+- **Tree-sitter** - Coloration syntaxique avancée
+
 ## ⌨️ Raccourcis Clavier
 
 ### Applications Principales
@@ -87,6 +93,10 @@ py                    # python3
 pip                   # uv pip
 venv                  # uv venv
 uv-project <nom>      # Créer un nouveau projet UV
+pylint-check          # pylint *.py
+flake8-check          # flake8 .
+ruff-check            # ruff check .
+ruff-fix              # ruff check --fix .
 ```
 
 ### Ansible
@@ -108,6 +118,8 @@ gov                   # go vet
 goi                   # go install
 gog                   # go get
 goclean               # go clean -modcache
+golint                # golangci-lint run
+gocheck               # staticcheck ./...
 go-project <nom>      # Créer un nouveau projet Go
 go-workspace <nom>    # Créer un workspace Go
 gotest-cover          # Tests avec coverage HTML
@@ -182,11 +194,13 @@ Cette version est pré-configurée pour les utilisateurs français :
 - **Spotify** - Musique
 
 ### Développement
-- **Neovim** - Éditeur modal moderne
+- **Neovim** - Éditeur modal moderne avec LazyVim
 - **GitHub CLI** - Intégration GitHub
 - **Go** - Langage de programmation Google
 - **Cargo** - Gestionnaire Rust
 - **Docker** - Containerisation
+- **LSP Servers** - Support complet pour Go, Python, TypeScript, Rust, C/C++, Lua, Bash, YAML, JSON
+- **Linters** - golangci-lint, ruff, pylint, eslint, prettier, shellcheck, yamllint, cppcheck
 
 ## 🤝 Contribution
 

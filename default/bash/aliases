@@ -57,6 +57,10 @@ alias tofu-workflow='tofu fmt && tofu init && tofu validate && tofu plan'
 alias py='python3'
 alias pip='uv pip'
 alias venv='uv venv'
+alias pylint-check='pylint *.py'
+alias flake8-check='flake8 .'
+alias ruff-check='ruff check .'
+alias ruff-fix='ruff check --fix .'
 
 # Aliases Ansible
 alias ap='ansible-playbook'
@@ -74,6 +78,8 @@ alias gov='go vet'
 alias goi='go install'
 alias gog='go get'
 alias goclean='go clean -modcache'
+alias golint='golangci-lint run'
+alias gocheck='staticcheck ./...'
 
 # Aliases Hyprland
 alias hypr-reload='hyprctl reload'
