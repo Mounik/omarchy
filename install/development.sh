@@ -5,4 +5,8 @@ yay -S --noconfirm --needed \
   imagemagick \
   mariadb-libs postgresql-libs \
   github-cli \
-  lazygit lazydocker-bin
+  lazygit lazydocker-bin \
+  ansible opentofu
+
+# Install Astral UV
+wget -qO- https://astral.sh/uv/install.sh | sh

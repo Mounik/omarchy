@@ -66,6 +66,26 @@ web2app-remove() {
   rm "$ICON_PATH"
 }
 
+# mkdir + cd
+mkcd() {
+  if [ -z "$1" ]; then
+    echo "Usage: mkcd <directory>"
+    return 1
+  fi
+  mkdir -p "$1" && cd "$1"
+}
+
+# UV project creation
+uv-project() {
+    if [ -z "$1" ]; then
+        echo "Usage: uv-project <nom-du-projet>"
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1"
+    uv init
+    echo "Projet UV créé: $1"
+}
+
 # Ensure changes to ~/.XCompose are immediately available
 refresh-xcompose() {
   pkill fcitx5
