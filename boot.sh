@@ -1,13 +1,13 @@
 #!/bin/bash
 
-ansi_art=' ▄██████▄    ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄████████    ▄█    █▄    ▄██   ▄  
+ansi_art=' ▄██████▄    ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████  ▄████████    ▄█    █▄    ▄██   ▄
 ███    ███ ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ███    ███   ███    ███   ███   ██▄
 ███    ███ ███   ███   ███   ███    ███   ███    ███ ███    █▀    ███    ███   ███▄▄▄███
 ███    ███ ███   ███   ███   ███    ███  ▄███▄▄▄▄██▀ ███         ▄███▄▄▄▄███▄▄ ▀▀▀▀▀▀███
 ███    ███ ███   ███   ███ ▀███████████ ▀▀███▀▀▀▀▀   ███        ▀▀███▀▀▀▀███▀  ▄██   ███
 ███    ███ ███   ███   ███   ███    ███ ▀███████████ ███    █▄    ███    ███   ███   ███
 ███    ███ ███   ███   ███   ███    ███   ███    ███ ███    ███   ███    ███   ███   ███
- ▀██████▀   ▀█   ███   █▀    ███    █▀    ███    ███ ████████▀    ███    █▀     ▀█████▀ 
+ ▀██████▀   ▀█   ███   █▀    ███    █▀    ███    ███ ████████▀    ███    █▀     ▀█████▀
                                           ███    ███                                    '
 
 echo -e "\n$ansi_art\n"
@@ -16,7 +16,7 @@ sudo pacman -Sy --noconfirm --needed git
 
 echo -e "\nCloning Omarchy..."
 rm -rf ~/.local/share/omarchy/
-git clone https://github.com/basecamp/omarchy.git ~/.local/share/omarchy >/dev/null
+git clone https://github.com/Mounik/omarchy.git ~/.local/share/omarchy >/dev/null
 
 # Use custom branch if instructed
 if [[ -n "$OMARCHY_REF" ]]; then
