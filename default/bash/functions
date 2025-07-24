@@ -86,6 +86,44 @@ uv-project() {
     echo "Projet UV créé: $1"
 }
 
+# Go project creation and management
+go-project() {
+    if [ -z "$1" ]; then
+        echo "Usage: go-project <nom-du-projet>"
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1"
+    go mod init "$1"
+    echo "package main
+
+import \"fmt\"
+
+func main() {
+    fmt.Println(\"Hello, World!\")
+}" > main.go
+    echo "Projet Go créé: $1"
+}
+
+# Go workspace creation
+go-workspace() {
+    if [ -z "$1" ]; then
+        echo "Usage: go-workspace <nom-du-workspace>"
+        return 1
+    fi
+    mkdir -p "$1" && cd "$1"
+    go work init
+    echo "Workspace Go créé: $1"
+}
+
+# Go test with coverage
+gotest-cover() {
+    go test -coverprofile=coverage.out ./...
+    if [ -f coverage.out ]; then
+        go tool cover -html=coverage.out -o coverage.html
+        echo "Coverage report généré: coverage.html"
+    fi
+}
+
 # Ensure changes to ~/.XCompose are immediately available
 refresh-xcompose() {
   pkill fcitx5

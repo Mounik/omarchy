@@ -64,6 +64,17 @@ alias av='ansible-vault'
 alias ag='ansible-galaxy'
 alias ai='ansible-inventory'
 
+# Aliases Go
+alias gob='go build'
+alias gor='go run'
+alias got='go test'
+alias gom='go mod'
+alias gof='go fmt'
+alias gov='go vet'
+alias goi='go install'
+alias gog='go get'
+alias goclean='go clean -modcache'
+
 # Aliases Hyprland
 alias hypr-reload='hyprctl reload'
 alias hypr-logs='journalctl -f _COMM=Hyprland'
